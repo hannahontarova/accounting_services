@@ -1,0 +1,77 @@
+{
+    "source": "mockoon:1.14.1",
+    "data": [
+        {
+            "type": "environment",
+            "item": {
+                "uuid": "",
+                "lastMigration": 15,
+                "name": "New environment",
+                "endpointPrefix": "service",
+                "latency": 0,
+                "port": 3002,
+                "routes": [
+                    {
+                        "uuid": "",
+                        "documentation": "",
+                        "method": "get",
+                        "endpoint": "",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "{\n  \"service\":[\n    {\n      \"img\": \"images/content/specialize.png\",\n      \"title\": \"Бухгалтерское обслуживание1\"\n    },\n    {\n      \"img\": \"images/content/specialize.png\",\n      \"title\": \"Бухгалтерское обслуживание2\"\n    },\n    {\n      \"img\": \"images/content/specialize.png\",\n      \"title\": \"Бухгалтерское обслуживание3\"\n    },\n    {\n      \"img\": \"images/content/specialize.png\",\n      \"title\": \"Бухгалтерское обслуживание4\"\n    },\n    {\n      \"img\": \"images/content/specialize.png\",\n      \"title\": \"Бухгалтерское обслуживание5\"\n    },\n    {\n      \"img\": \"images/content/specialize.png\",\n      \"title\": \"Бухгалтерское обслуживание6\"\n    },\n    {\n      \"img\": \"images/content/specialize.png\",\n      \"title\": \"Бухгалтерское обслуживание7\"\n    },\n    {\n      \"img\": \"images/content/specialize.png\",\n      \"title\": \"Бухгалтерское обслуживание8\"\n    },\n    {\n      \"img\": \"images/content/specialize.png\",\n      \"title\": \"Бухгалтерское обслуживание9\"\n    },\n    {\n      \"img\": \"images/content/specialize.png\",\n      \"title\": \"Бухгалтерское обслуживание10\"\n    },\n    {\n      \"img\": \"images/content/specialize.png\",\n      \"title\": \"Бухгалтерское обслуживание11\"\n    },\n    {\n      \"img\": \"images/content/specialize.png\",\n      \"title\": \"Бухгалтерское обслуживание12\"\n    }\n  ]\n}",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "",
+                                "headers": [],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    }
+                ],
+                "proxyMode": false,
+                "proxyHost": "",
+                "proxyRemovePrefix": false,
+                "https": false,
+                "cors": true,
+                "headers": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    },
+                    {
+                        "key": "Access-Control-Allow-Origin",
+                        "value": "*"
+                    },
+                    {
+                        "key": "Access-Control-Allow-Methods",
+                        "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+                    },
+                    {
+                        "key": "Access-Control-Allow-Headers",
+                        "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                    }
+                ],
+                "proxyReqHeaders": [
+                    {
+                        "key": "",
+                        "value": ""
+                    }
+                ],
+                "proxyResHeaders": [
+                    {
+                        "key": "",
+                        "value": ""
+                    }
+                ]
+            }
+        }
+    ]
+}

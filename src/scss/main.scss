@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $latoRagularFont;
+    font-size: $textmidi;
+}
+// TOP SECTION
+
+.top-section {
+    color: white;
+    position: absolute;
+    z-index: 3;
+}
+.nav-custom{
+    padding: 22px 0 31px 0;
+}
+.top-nav {
+    color: black;
+    font-size: $textsmall;
+    padding-bottom: 22px;
+}
+.bottom-nav{
+   padding-right: 5em;
+   &:last-child{
+    padding-right: 0;
+   }
+    &__item{
+        color: #222;
+        font-size: $textmidi;
+        font-family: $latoBoldFont;
+        padding: 0!important;
+    }
+}
+.gradient {
+	display: inline-block;
+	position: relative;
+	line-height: 0;
+}
+.carousel-custom{
+    justify-content: start;
+    margin-bottom: 4%;
+    margin-left: 7.5%;
+}
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    border-radius: 10px;
+    height: 10px;
+    border-bottom: none;
+    border-top: none;
+    margin-right: 40px;
+}
+.carousel-control-prev, .carousel-control-next {
+    top: 81%;
+    justify-content: flex-end;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(0deg, rgba(225, 225, 225, 0.3), rgba(225, 225, 225, 0.3));
+}
+.carousel-control-prev{
+    left: 86.5%;
+}
+.carousel-control-next{
+    right: 6.5%;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 1rem;
+    transform: translate(-14px, 1px);
+}
+
+.gradient:after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: transparent;
+	background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+	opacity: 0.8;
+}
+
+.main-text {
+    padding: 8em 0;
+}
+
+.main-title {
+    font-size: $textlarge;
+    font-family: $merriBoldFont;
+    padding-bottom: 1em;
+}
+
+.btn {
+    width: 270px;
+    height: 60px;
+    background: $blue;
+    color: white;
+    border-radius: 0;
+    font-size: $textmedium;
+}
+
+.logo {
+    color: $blue;
+    font-size: $textbig;
+    font-family: $merriBoldFont;
+    padding-right: 1em;
+}
+// ACCOUNTING SERVICES
+.field{
+    padding: 2em 0;
+}
+// CONTACT
+.contact {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/content/section.png');
+    color: white;
+    padding: 5em 0;
+}
+.subtitle{
+    font-size: 24px;
+    color: #BDBDBD;
+    font-family: $latoRagularFont;
+}
+.title {
+    font-size: $textlarge;
+    font-family: $merriBoldFont;
+    &--grey{
+        color: #333;
+    }
+}
+.text {
+    font-size: 18px;
+    padding: 3em 0;
+    font-family: $latoThinFont;
+    max-width: 400px;
+}
+
+.form-input,
+.form-text, .search__input {
+    background: transparent;
+    border: transparent;
+    border-bottom: 1px solid white;
+    border-radius: 0;
+    padding: 0;
+    color: white;
+}
+.search__input{
+    color: #BDBDBD;
+    border-bottom: 1px solid #BDBDBD;
+}
+.form-input {
+    width: 100%;
+    height: 67px;
+    &placeholder {
+        color: white;
+    }
+}
+.form-text {
+    resize: none;
+    width: 100%;
+    height: 136px;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    &-img{
+        padding-right: 1em;
+    }
+    &-item {
+        display: flex;
+        align-items: center;
+        padding-right: 2em;
+        &__right{
+            padding-right: 0;
+        }
+    }
+}
+
+// .list-img {
+//     padding-right: 1em;
+// }
+
+// .list-item {
+//     display: flex;
+//     align-items: center;
+//     padding-right: 2em;
+//     &__right{
+//         padding-right: 0;
+//     }
+// }
