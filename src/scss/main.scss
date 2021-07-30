@@ -9,7 +9,7 @@ body {
 // TOP SECTION
 
 .top-section {
-    color: white;
+    color: $white;
     position: absolute;
     z-index: 3;
 }
@@ -17,7 +17,7 @@ body {
     padding: 22px 0 31px 0;
 }
 .top-nav {
-    color: black;
+    color: $black;
     font-size: $textsmall;
     padding-bottom: 22px;
 }
@@ -27,19 +27,38 @@ body {
     padding-right: 0;
    }
     &__item{
-        color: #222;
+        color: $darkGrey;
         font-size: $textmidi;
         font-family: $latoBoldFont;
         padding: 0!important;
     }
 }
-.gradient {
-	display: inline-block;
-	position: relative;
-	line-height: 0;
+.toggler-custom{
+    height: 3px;
+    max-width: 15px;
+    background: $blue;
+    position: relative;
+    border: none;
+    &::before, &::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -5px;
+        right: 0;
+        z-index: 1;
+        display: block;
+        height: 3px;
+        width: 15px;
+        background: $blue;
+    }
+    &::after{
+        top: 5px;
+        max-width: 15px;
+    }
 }
-.carousel-custom{
-    justify-content: start;
+
+.carousel-indicators{
+    justify-content:flex-start;
     margin-bottom: 4%;
     margin-left: 7.5%;
 }
@@ -53,7 +72,7 @@ body {
 }
 .carousel-control-prev, .carousel-control-next {
     top: 81%;
-    justify-content: flex-end;
+
     width: 45px;
     height: 45px;
     background: linear-gradient(0deg, rgba(225, 225, 225, 0.3), rgba(225, 225, 225, 0.3));
@@ -66,20 +85,24 @@ body {
 }
 .carousel-control-prev-icon, .carousel-control-next-icon {
     width: 1rem;
-    transform: translate(-14px, 1px);
+    // transform: translate(-14px, 1px);
 }
-
-.gradient:after {
-	content: "";
-	display: block;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	background: transparent;
-	background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
-	opacity: 0.8;
+.gradient {
+	display: inline-block;
+	position: relative;
+	line-height: 0;
+    &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: transparent;
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+        opacity: 0.8;
+    }
 }
 
 .main-text {
@@ -91,16 +114,14 @@ body {
     font-family: $merriBoldFont;
     padding-bottom: 1em;
 }
-
 .btn {
     width: 270px;
     height: 60px;
     background: $blue;
-    color: white;
+    color: $white;
     border-radius: 0;
     font-size: $textmedium;
 }
-
 .logo {
     color: $blue;
     font-size: $textbig;
@@ -108,29 +129,75 @@ body {
     padding-right: 1em;
 }
 // ACCOUNTING SERVICES
+.section-services{
+    background: $lightGrey;
+    padding: 5em 0;
+}
 .field{
     padding: 2em 0;
+}
+.more__btn{
+    margin-left: 15%;
+}
+.gradient-blue {
+    display: none;
+    position: relative;
+    line-height: 0;
+    &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: transparent;
+        background-image: linear-gradient(0deg, rgba(0, 95, 163, 0.65), rgba(0, 95, 163, 0.65));
+        opacity: 0.8;
+    }
+}
+.service-item{
+    padding-bottom: 6%;
+    position: relative;
+}
+.service-picture{
+    filter: brightness(50%);
+    &:hover{
+        filter: hue-rotate(245rad);
+    }
+}
+.service-title{
+    color: $white;
+    position: absolute;
+    z-index: 1;
+    font-family: $latoBoldFont;
+    font-size: $textregular;
+    bottom: 15%;
+    left: 15%;
 }
 // CONTACT
 .contact {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/content/section.png');
-    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: $white;
     padding: 5em 0;
 }
 .subtitle{
-    font-size: 24px;
-    color: #BDBDBD;
+    font-size: $textregular;
+    color: $grey;
     font-family: $latoRagularFont;
 }
 .title {
     font-size: $textlarge;
     font-family: $merriBoldFont;
     &--grey{
-        color: #333;
+        color: $mediumGrey;
+        padding: 1em 0 2em 0;
     }
 }
 .text {
-    font-size: 18px;
+    font-size: $textmedium;
     padding: 3em 0;
     font-family: $latoThinFont;
     max-width: 400px;
@@ -140,20 +207,21 @@ body {
 .form-text, .search__input {
     background: transparent;
     border: transparent;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid $white;
     border-radius: 0;
     padding: 0;
-    color: white;
+    color: $white;
 }
 .search__input{
-    color: #BDBDBD;
-    border-bottom: 1px solid #BDBDBD;
+    color: $grey;
+    border-bottom: 1px solid $grey;
+    margin-right: 5%;
 }
 .form-input {
     width: 100%;
     height: 67px;
     &placeholder {
-        color: white;
+        color: $white;
     }
 }
 .form-text {
@@ -161,7 +229,9 @@ body {
     width: 100%;
     height: 136px;
 }
-
+.form-button{
+        justify-content: flex-end;
+}
 .list {
     display: flex;
     justify-content: space-between;
@@ -177,16 +247,119 @@ body {
         }
     }
 }
+// ADAPTIVITY
+@media screen and (max-width: 1024px) {
+    .top-section{
+        margin: 0;
+    }
+    .main-text{
+        padding: 2em 0;
+    }
+    .carousel-indicators {
+        margin-left: 4.5%;
+    }
+    .carousel-control-prev {
+        left: 84.5%;
+    }
+    .title {
+        font-size: $textbig;
+        &--grey{
+            padding: 1em 0;
+        }
+    }
+    .section-services, .contact{
+        padding: 2em 0;
+    }
+}
 
-// .list-img {
-//     padding-right: 1em;
-// }
+@media screen and (max-width: 768px) {
+    // TOP SECTION
+    .hide{
+        display: none;
+    }
+    .main-title {
+        font-size: $textbig;
+        padding-bottom: .5em;
+    }
+    .carousel-indicators{
+        margin-left: 3%;
+    }
+    .carousel-control-next{
+        right: 3.5%;
+    }
+    // SERVICES
 
-// .list-item {
-//     display: flex;
-//     align-items: center;
-//     padding-right: 2em;
-//     &__right{
-//         padding-right: 0;
-//     }
-// }
+    .subtitle{
+        font-size: $textmedium;
+    }
+
+    .service-title{
+        color: $white;
+        position: absolute;
+        z-index: 1;
+        font-family: $latoBoldFont;
+        font-size: $textmedium;
+        bottom: 15%;
+        left: 15%;
+    }
+    .search, .field, .more{
+        display: flex;
+        justify-content: center;
+    }
+    .more__btn{
+        margin-left: 0;
+        margin-bottom: 1em;
+    }
+    // CONTACT
+    .text{
+        padding: 2em 0;
+    }
+    .list{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        &-item:last-child{
+            padding: 1em 0;
+        }
+    }
+    .surname{
+        padding-top: 1em;
+    }
+    .aptive-form{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .nav-custom {
+        padding: 0;
+    }
+    .hide-small{
+        display: none;
+    }
+    .small-container{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .top-section{
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/content/section.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        position: static;
+    }
+    .main-text{
+        text-align: center;
+    }
+    .subtitle{
+        font-size: $textsmall;
+    }
+    .title {
+        font-size: $textmedium;
+    }
+    .form-button{
+        justify-content: center;
+    }
+
+}

@@ -1,12 +1,11 @@
 import '../scss/app.scss'
 import 'bootstrap'
-import {DATA} from './data'
+// import 'slick-carousel'
 
 const btn = document.querySelector('.search__btn')
 const btnMore = document.querySelector('.more__btn')
 const input = document.querySelector('.search__input')
 const field = document.querySelector('.field__body')
-let result = []
 let search = []
 
 const fetchData = async () => {
@@ -78,9 +77,36 @@ btnMore.onclick = async function(){
         console.log(err)
     }
 }
-//Сделать при нажатии на enter чтобы отрабатывал поиск
-
-//Получаем данные из макуна асинхронно
-//Наполняем DATA
-//Выводим их на сайт
-//Поиск по дате
+const [...inputs] = document.querySelectorAll('#form input')
+const textarea = document.getElementById('textarea')
+let formData ={
+    name: '',
+    surname: '',
+    message: ''
+}
+inputs[0].oninput = function (e){
+    formData.name = e.target.value
+}
+inputs[1].oninput = function (e){
+    formData.surname = e.target.value
+}
+textarea.oninput = function(e){
+    formData.message = e.target.value
+}
+btnSend.onclick = function(){
+    if (!formData.name){
+        inputs[0].style.borderColor = 'red'
+    } else {
+        inputs[0].style.borderColor = '#616161'
+    }
+    if (!formData.surname){
+        inputs[1].style.borderColor = 'red'
+    } else {
+        inputs[1].style.borderColor = '#616161'
+    }
+    if (!formData.message){
+        textarea.style.borderColor = 'red'
+    } else {
+        textarea.style.borderColor = '#616161'
+    }
+}
