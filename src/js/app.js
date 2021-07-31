@@ -2,10 +2,10 @@ import '../scss/app.scss'
 import 'bootstrap'
 // import 'slick-carousel'
 
-const btn = document.querySelector('.search__btn')
-const btnMore = document.querySelector('.more__btn')
-const input = document.querySelector('.search__input')
-const field = document.querySelector('.field__body')
+const btn = document.querySelector('.search-btn')
+const btnMore = document.querySelector('.more-btn')
+const input = document.querySelector('.search-input')
+const field = document.querySelector('.field-body')
 let search = []
 
 const fetchData = async () => {

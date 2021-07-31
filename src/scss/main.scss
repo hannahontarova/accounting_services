@@ -6,8 +6,31 @@ body {
     font-family: $latoRagularFont;
     font-size: $textmidi;
 }
+// GLODAL
+.section{
+    padding: 5em 0;
+    &-grey{
+        background: $lightGrey;
+    }
+    &-contact {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/content/section.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: $white;
+    }
+}
+.btn {
+    width: 270px;
+    height: 60px;
+    background: $blue;
+    color: $white;
+    border-radius: 0;
+    font-size: $textmedium;
+}
+.blue{
+    color: $blue;
+}
 // TOP SECTION
-
 .top-section {
     color: $white;
     position: absolute;
@@ -56,7 +79,6 @@ body {
         max-width: 15px;
     }
 }
-
 .carousel-indicators{
     justify-content:flex-start;
     margin-bottom: 4%;
@@ -72,7 +94,6 @@ body {
 }
 .carousel-control-prev, .carousel-control-next {
     top: 81%;
-
     width: 45px;
     height: 45px;
     background: linear-gradient(0deg, rgba(225, 225, 225, 0.3), rgba(225, 225, 225, 0.3));
@@ -104,23 +125,13 @@ body {
         opacity: 0.8;
     }
 }
-
 .main-text {
     padding: 8em 0;
 }
-
 .main-title {
     font-size: $textlarge;
     font-family: $merriBoldFont;
     padding-bottom: 1em;
-}
-.btn {
-    width: 270px;
-    height: 60px;
-    background: $blue;
-    color: $white;
-    border-radius: 0;
-    font-size: $textmedium;
 }
 .logo {
     color: $blue;
@@ -129,33 +140,29 @@ body {
     padding-right: 1em;
 }
 // ACCOUNTING SERVICES
-.section-services{
-    background: $lightGrey;
-    padding: 5em 0;
-}
 .field{
     padding: 2em 0;
 }
-.more__btn{
+.more-btn{
     margin-left: 15%;
 }
-.gradient-blue {
-    display: none;
-    position: relative;
-    line-height: 0;
-    &:after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: transparent;
-        background-image: linear-gradient(0deg, rgba(0, 95, 163, 0.65), rgba(0, 95, 163, 0.65));
-        opacity: 0.8;
-    }
-}
+// .gradient-blue {
+//     display: none;
+//     position: relative;
+//     line-height: 0;
+//     &:after {
+//         content: "";
+//         display: block;
+//         width: 100%;
+//         height: 100%;
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         background: transparent;
+//         background-image: linear-gradient(0deg, rgba(0, 95, 163, 0.65), rgba(0, 95, 163, 0.65));
+//         opacity: 0.8;
+//     }
+// }
 .service-item{
     padding-bottom: 6%;
     position: relative;
@@ -176,13 +183,7 @@ body {
     left: 15%;
 }
 // CONTACT
-.contact {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/content/section.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: $white;
-    padding: 5em 0;
-}
+
 .subtitle{
     font-size: $textregular;
     color: $grey;
@@ -191,6 +192,9 @@ body {
 .title {
     font-size: $textlarge;
     font-family: $merriBoldFont;
+    &-about{
+        padding: 1em 0 1.5em 0;
+    }
     &--grey{
         color: $mediumGrey;
         padding: 1em 0 2em 0;
@@ -200,11 +204,13 @@ body {
     font-size: $textmedium;
     padding: 3em 0;
     font-family: $latoThinFont;
-    max-width: 400px;
+    max-width: 445px;
+    &--about{
+        padding: 0;
+    }
 }
-
 .form-input,
-.form-text, .search__input {
+.form-text, .search-input {
     background: transparent;
     border: transparent;
     border-bottom: 1px solid $white;
@@ -212,7 +218,7 @@ body {
     padding: 0;
     color: $white;
 }
-.search__input{
+.search-input{
     color: $grey;
     border-bottom: 1px solid $grey;
     margin-right: 5%;
@@ -228,6 +234,7 @@ body {
     resize: none;
     width: 100%;
     height: 136px;
+    font-size: 21px;
 }
 .form-button{
         justify-content: flex-end;
@@ -247,8 +254,54 @@ body {
         }
     }
 }
+// ABOUT
+.cases{
+    justify-content: space-around;
+    &--bottom{
+        margin-top: 3em;
+    }
+}
+.cases-item{
+    max-width: 225px;
+    height: 225px;
+    padding: 30px;
+    background-color: $lightGrey;
+    &:hover{
+        background-color: $blue;
+        color: $white;
+        .cases-link{
+            color: $white;
+        }
+    }
+}
+.cases-number{
+    font-size: 55px;
+    font-family: $latoBoldFont;
+}
+.cases-text{
+    font-family: $latoBoldFont;
+    padding: 1em 0 1.3em 0;
+
+}
+.cases-link{
+    color: $blue;
+    text-decoration: underline;
+}
+// FOOTER
+footer{
+    padding: 2em 0;
+    color: $black;
+    font-family: $latoThinFont;
+}
+.footer-text{
+    display: flex;
+    justify-content: flex-end;
+}
 // ADAPTIVITY
 @media screen and (max-width: 1024px) {
+    .section{
+        padding: 2em 0;
+    }
     .top-section{
         margin: 0;
     }
@@ -267,8 +320,10 @@ body {
             padding: 1em 0;
         }
     }
-    .section-services, .contact{
-        padding: 2em 0;
+    .cases{
+        &--bottom{
+            margin-top: .1em;
+        }
     }
 }
 
@@ -282,7 +337,7 @@ body {
         padding-bottom: .5em;
     }
     .carousel-indicators{
-        margin-left: 3%;
+        margin-left: 4%;
     }
     .carousel-control-next{
         right: 3.5%;
@@ -306,9 +361,29 @@ body {
         display: flex;
         justify-content: center;
     }
-    .more__btn{
+    .more-btn{
         margin-left: 0;
         margin-bottom: 1em;
+    }
+    // ABOUT
+    .about{
+        text-align:left;
+    }
+    .title-about{
+        padding: 1em 0 0;
+    }
+    .text--about{
+        max-width: none;
+        padding: 0;
+    }
+    .cases{
+        justify-content: center;
+        &--bottom{
+            margin-top: .2em;
+        }
+    }
+    .cases-item-left{
+        margin-right: .1em;
     }
     // CONTACT
     .text{
@@ -328,9 +403,15 @@ body {
     .aptive-form{
         flex-direction: column;
     }
+    // FOOTER
+    .footer-text, .footer-text-top{
+        display: flex;
+        justify-content: center;
+    }
 }
 
 @media screen and (max-width: 576px) {
+    // TOP SECTION
     .nav-custom {
         padding: 0;
     }
@@ -352,6 +433,7 @@ body {
     .main-text{
         text-align: center;
     }
+    // GLOBALS
     .subtitle{
         font-size: $textsmall;
     }
@@ -360,6 +442,10 @@ body {
     }
     .form-button{
         justify-content: center;
+    }
+    // ABOUT
+    .text--about{
+        font-size: $textmidi;
     }
 
 }
